@@ -1,49 +1,180 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Student Portal - FAQ</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #eef2f5;
+            color: #2d3748;
+        }
+
+        header {
+            background: #1a365d;
+            color: white;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 12px;
+            background: #2b6cb0;
+            padding: 12px 15px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 6px 12px;
+            border-radius: 4px;
+            transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out;
+        }
+
+        nav a:hover {
+            color: #ffeb3b;
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+
+        nav a.active {
+            color: #ffffff;
+            background-color: #1a365d;
+        }
+
+        footer {
+            background: #1a365d;
+            color: white;
+            padding: 12px;
+            margin-top: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .faq-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background: white;
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(26, 54, 93, 0.12);
+        }
+
+        .card h5 {
+            color: #1a365d;
+            font-weight: 700;
+            margin-bottom: 10px;
+            border-bottom: 2px solid #eef2f5;
+            padding-bottom: 8px;
+        }
+
+        .card p {
+            color: #6c757d;
+            margin-bottom: 0;
+            line-height: 1.5;
+        }
+
+        /* Responsive Styles */
+        @media(max-width: 576px) {
+            nav {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
 </head>
-<body>
 
-    <h1 align="center">Student Portal</h1>
-    <a href="Home.html">Home</a> |
-        <a href="Login.html">Login</a> |
-        <a href="Dashboard.html">Dashboard</a> |
-        <a href="Profile.html">Profile</a> |
-        <a href="Events.html">Events</a> |
-        <a href="FAQ.html">FAQ</a> |
-        <a href="Feedback.html">Feedback</a> |
-        <a href="Contact.html">Contact</a> |
-        <a href="About Us.html">About Us</a>
-    </p>
+<body class="d-flex flex-column min-vh-100">
 
-    <hr>
-    <p align="center">
-        
+<header class="shadow-sm">
+    <h1 class="m-0 fw-bold fs-2">🎓 Student Portal</h1>
+</header>
 
-    <h2 align="center">Frequently Asked Questions (FAQ)</h2>
+<nav class="shadow-sm">
+    <a href="Home.html">Home</a>
+    <a href="Login.html">Login</a>
+    <a href="Profile.html">Profile</a>
+    <a href="Dashboard.html">Dashboard</a>
+    <a href="Events.html">Events</a>
+    <a href="FAQ.html" class="active">FAQ</a>
+    <a href="Feedback.html">Feedback</a>
+    <a href="Contact.html">Contact</a>
+    <a href="About Us.html">About Us</a>
+</nav>
 
-    <h3>1. What is the Student Portal?</h3>
-    <p>The Student Portal is an online platform where students can access academic information and college services.</p>
+<main class="flex-grow-1 container my-4">
 
-    <h3>2. How do I log in?</h3>
-    <p>Enter your username and password on the login page.</p>
+    <h2 class="text-center fw-bold text-primary mb-4">Frequently Asked Questions</h2>
+    <div class="row justify-content-center mb-4">
+        <div class="col-md-8 col-lg-6">
+            <input type="text" class="form-control form-control-lg shadow-sm" placeholder="Search FAQ...">
+        </div>
+    </div>
+    <div class="faq-grid">
 
-    <h3>3. What can I do on the Student Portal?</h3>
-    <p>You can view notices, events, courses, attendance, results, and other academic information.</p>
+        <div class="card">
+            <h5>What is Student Portal?</h5>
+            <p>An online platform for students.</p>
+        </div>
 
-    <h3>4. What should I do if I forget my password?</h3>
-    <p>Use the "Forgot Password" option or contact the administrator.</p>
+        <div class="card">
+            <h5>How do I login?</h5>
+            <p>Use your username and password.</p>
+        </div>
 
-    <h3>5. Who can use the Student Portal?</h3>
-    <p>Students, faculty members, and administrators can access the portal based on their login credentials.</p>
+        <div class="card">
+            <h5>Forgot Password?</h5>
+            <p>Contact the admin.</p>
+        </div>
 
-    <h3>6. How can I contact the college?</h3>
-    <p>Visit the Contact page to find the college contact details.</p>
+        <div class="card">
+            <h5>What can I do?</h5>
+            <p>Check attendance, results and notices.</p>
+        </div>
 
-    <hr>
+    </div>
+    <div class="card p-4 text-center mt-5 bg-white shadow-sm border-0 align-items-center">
+        <h4 class="fw-bold text-dark mb-2">Need More Help?</h4>
+        <p class="text-secondary mb-3">Contact our support team for further assistance.</p>
+        <div>
+            <a href="Contact.html" class="btn btn-primary px-4 py-2 fw-medium shadow-sm">
+                Contact Support
+            </a>
+        </div>
+    </div>
 
-    <p align="center">&copy; 2026 Student Portal. All Rights Reserved.</p>
+</main>
+
+<footer class="mt-auto">
+    <p class="m-0">&copy; 2026 Student Portal. All Rights Reserved.</p>
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
 </html>

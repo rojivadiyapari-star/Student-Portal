@@ -1,59 +1,222 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Student Portal - Events</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+            margin: 0;
+            color: #2d3748;
+        }
+        header {
+            background: #0d6efd;
+            color: white;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 15px;
+            background: white;
+            padding: 15px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #212529;
+            font-weight: bold;
+            padding: 6px 12px;
+            border-radius: 4px;
+            transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out;
+        }
+
+        nav a:hover {
+            color: #0d6efd;
+            background-color: #eef2f5;
+        }
+
+        h2, h3 {
+            text-align: center;
+            color: #0d6efd;
+        }
+        .events {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+        .box {
+            background: white;
+            border: 2px solid #0d6efd;
+            border-radius: 10px;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 3px 8px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .box:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 16px rgba(13, 110, 253, 0.18);
+        }
+
+        .box h5 {
+            color: #0d6efd;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .box p {
+            color: #6c757d;
+            font-size: 0.95rem;
+            margin-bottom: 15px;
+        }
+        footer {
+            background: #0d6efd;
+            color: white;
+            padding: 15px;
+            margin-top: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        @media(max-width: 576px) {
+            nav {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
 </head>
-<body>
 
-    <h1 align="center">Student Portal</h1>
+<body class="d-flex flex-column min-vh-100">
 
-    <p align="center">
-        <a href="Home.html">Home</a> |
-        <a href="Login.html">Login</a> |
-        <a href="Dashboard.html">Dashboard</a> |
-        <a href="Profile.html">Profile</a> |
-        <a href="FAQ.html">FAQ</a> |
-        <a href="Feedback.html">Feedback</a> |
-        <a href="Contact.html">Contact</a> |
-         <a href="Events.html">Events</a> |
-         <a href="About Us.html">About Us</a>
+<header class="shadow-sm">
+    <h1 class="m-0 fw-bold fs-2">🎓 Student Portal</h1>
+</header>
 
+<nav class="shadow-sm">
+    <a href="Home.html">Home</a>
+    <a href="Login.html">Login</a>
+    <a href="Profile.html">Profile</a>
+    <a href="Dashboard.html">Dashboard</a>
+    <a href="Events.html">Events</a>
+    <a href="FAQ.html">FAQ</a>
+    <a href="Feedback.html">Feedback</a>
+    <a href="Contact.html">Contact</a>
+    <a href="About Us.html">About Us</a>
+</nav>
 
-    </p>
+<main class="flex-grow-1">
+    <div class="container mt-4 mb-5">
 
-    <hr>
+        <h2 class="fw-bold mb-3">College Events</h2>
 
-    <h2 align="center">College Events</h2>
+        <p class="text-center text-muted fs-5 mb-4">
+            Welcome to the Events page. Join exciting college events and improve your knowledge and skills.
+        </p>
 
-    <p>
-        Welcome to the Events page. Here you can find the different activities
-        organized by the college.
-    </p>
+        <div class="events">
 
-    <ul>
-        <li>Orientation Program</li>
-        <li>Technical Workshop</li>
-        <li>Coding Competition</li>
-        <li>Hackathon</li>
-        <li>Project Exhibition</li>
-        <li>Seminar</li>
-        <li>Guest Lecture</li>
-        <li>Career Guidance Program</li>
-        <li>Industrial Visit</li>
-        <li>Sports Day</li>
-        <li>Cultural Fest</li>
-        <li>Annual Function</li>
-    </ul>
+            <div class="box">
+                <div>
+                    <h5>Orientation Program</h5>
+                    <p>Welcome session for first-year students.</p>
+                </div>
+                <button class="btn btn-primary btn-sm px-4 fw-semibold">Join</button>
+            </div>
 
-    <hr>
+            <div class="box">
+                <div>
+                    <h5>Technical Workshop</h5>
+                    <p>Learn new technologies with experts.</p>
+                </div>
+                <button class="btn btn-primary btn-sm px-4 fw-semibold">Join</button>
+            </div>
 
-    <p align="center">
-        Participate in college events to improve your knowledge, skills, and overall development.
-    </p>
+            <div class="box">
+                <div>
+                    <h5>Coding Competition</h5>
+                    <p>Show your programming skills.</p>
+                </div>
+                <button class="btn btn-primary btn-sm px-4 fw-semibold">Join</button>
+            </div>
 
-    <hr>
+            <div class="box">
+                <div>
+                    <h5>Hackathon</h5>
+                    <p>Create innovative projects with your team.</p>
+                </div>
+                <button class="btn btn-primary btn-sm px-4 fw-semibold">Join</button>
+            </div>
 
-    <p align="center">&copy; 2026 Student Portal. All Rights Reserved.</p>
+            <div class="box">
+                <div>
+                    <h5>Project Exhibition</h5>
+                    <p>Display your academic projects.</p>
+                </div>
+                <button class="btn btn-primary btn-sm px-4 fw-semibold">Join</button>
+            </div>
+
+            <div class="box">
+                <div>
+                    <h5>Seminar</h5>
+                    <p>Gain knowledge from industry experts.</p>
+                </div>
+                <button class="btn btn-primary btn-sm px-4 fw-semibold">Join</button>
+            </div>
+
+            <div class="box">
+                <div>
+                    <h5>Guest Lecture</h5>
+                    <p>Interactive session with professionals.</p>
+                </div>
+                <button class="btn btn-primary btn-sm px-4 fw-semibold">Join</button>
+            </div>
+
+            <div class="box">
+                <div>
+                    <h5>Career Guidance</h5>
+                    <p>Prepare for placements and interviews.</p>
+                </div>
+                <button class="btn btn-primary btn-sm px-4 fw-semibold">Join</button>
+            </div>
+
+            <div class="box">
+                <div>
+                    <h5>Industrial Visit</h5>
+                    <p>Visit industries and learn practically.</p>
+                </div>
+                <button class="btn btn-primary btn-sm px-4 fw-semibold">Join</button>
+            </div>
+
+        </div>
+
+        <p class="text-center text-secondary mt-4 fw-medium">
+            Participate in college events for your overall development.
+        </p>
+
+    </div>
+</main>
+
+<footer class="mt-auto">
+    <p class="m-0">&copy; 2026 Student Portal | All Rights Reserved.</p>
+</footer>
 
 </body>
 </html>
