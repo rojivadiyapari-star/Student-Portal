@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Portal</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      background-color: #f4f6f9;
+      color: #333;
+    }
+
+    /* Header */
+    header {
+      background-color: #1d52b4;
+      color: white;
+      text-align: center;
+      padding: 2.5rem 1rem 1.5rem;
+    }
+
+    header h1 {
+      font-size: 2.2rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+    }
+
+    header p {
+      font-size: 1rem;
+      opacity: 0.9;
+    }
+
+    /* Navigation Bar */
+    nav {
+      background-color: #143d8a;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      padding: 0.8rem;
+      gap: 1.2rem;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-size: 0.95rem;
+      font-weight: 500;
+      padding: 0.4rem 0.8rem;
+      border-radius: 4px;
+      transition: background-color 0.2s ease;
+    }
+
+    nav a:hover, nav a.active {
+      background-color: rgba(255, 255, 255, 0.2);
+    }
+
+    /* Main Container */
+    .container {
+      max-width: 1000px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+
+    /* Cards */
+    .card {
+      background: white;
+      padding: 2rem;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    }
+
+    .card h2 {
+      font-size: 1.5rem;
+      color: #222;
+      margin-bottom: 0.8rem;
+    }
+
+    .card p {
+      color: #555;
+      line-height: 1.6;
+    }
+
+    /* Feature Buttons Grid */
+    .buttons-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin-top: 1.2rem;
+    }
+
+    .btn {
+      display: inline-block;
+      background-color: #e8f0fe;
+      color: #1d52b4;
+      text-decoration: none;
+      padding: 0.75rem 1.25rem;
+      border-radius: 6px;
+      font-weight: 600;
+      font-size: 0.95rem;
+      transition: all 0.2s ease;
+      border: 1px solid #d0e1fd;
+    }
+
+    .btn:hover {
+      background-color: #1d52b4;
+      color: white;
+      border-color: #1d52b4;
+      transform: translateY(-1px);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <h1>Student Portal</h1>
+    <p>Your academic information in one place</p>
+  </header>
+
+  <!-- Navigation Bar -->
+  <nav>
+    <a href="index.html" class="active">Home</a>
+    <a href="dashboard.html">Dashboard</a>
+    <a href="profile.html">Profile</a>
+    <a href="events.html">Events</a>
+    <a href="faq.html">FAQ</a>
+    <a href="feedback.html">Feedback</a>
+    <a href="contact.html">Contact</a>
+    <a href="about.html">About Us</a>
+    <a href="login.html">Login</a>
+  </nav>
+
+  <!-- Content Container -->
+  <main class="container">
+    
+    <!-- Welcome Card -->
+    <section class="card">
+      <h2>Welcome to Student Portal!</h2>
+      <p>Access your academic information, view results, check announcements, and explore student services from one convenient place.</p>
+    </section>
+
+    <!-- Portal Features Card -->
+    <section class="card">
+      <h2>Portal Features</h2>
+      <div class="buttons-grid">
+        <a href="dashboard.html" class="btn">View Dashboard</a>
+        <a href="profile.html" class="btn">Student Profile</a>
+        <a href="events.html" class="btn">College Events</a>
+        <a href="feedback.html" class="btn">Give Feedback</a>
+        <a href="contact.html" class="btn">Contact Us</a>
+      </div>
+    </section>
+
+  </main>
+
+</body>
+</html>
