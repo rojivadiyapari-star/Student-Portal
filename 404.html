@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Portal - Redirecting</title>
+  <link rel="stylesheet" href="style.css">
+  <script>
+    (function() {
+      var pathname = window.location.pathname;
+      var rawFile = pathname.substring(pathname.lastIndexOf('/') + 1);
+      var decodedFile = decodeURIComponent(rawFile).toLowerCase();
+      var routeMap = {
+        'dashboard.html': 'dashboard.html',
+        'profile.html': 'profile.html',
+        'events.html': 'events.html',
+        'event.html': 'events.html',
+        'faq.html': 'faq.html',
+        'feedback.html': 'feedback.html',
+        'contact.html': 'contact.html',
+        'about.html': 'about.html',
+        'about us.html': 'about.html',
+        'login.html': 'login.html',
+        'home.html': 'index.html',
+        'index.html': 'index.html'
+      };
+
+      if (routeMap[decodedFile]) {
+        window.location.replace(routeMap[decodedFile]);
+      }
+    })();
+  </script>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <h1>Student Portal</h1>
+    <p>Page Routing</p>
+  </header>
+
+  <!-- Navigation Bar -->
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="dashboard.html">Dashboard</a>
+    <a href="profile.html">Profile</a>
+    <a href="events.html">Events</a>
+    <a href="faq.html">FAQ</a>
+    <a href="feedback.html">Feedback</a>
+    <a href="contact.html">Contact</a>
+    <a href="about.html">About Us</a>
+    <a href="login.html">Login</a>
+  </nav>
+
+  <!-- Main Content Container -->
+  <main class="container">
+    <section class="card" style="text-align: center;">
+      <h2>Redirecting...</h2>
+      <p>If you are not redirected automatically, please choose a page from the navigation bar above or <a href="index.html" class="feature-btn">Return to Home</a>.</p>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2026 Student Portal. All Rights Reserved.</p>
+  </footer>
+
+</body>
+</html>
