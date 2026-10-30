@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Portal - Feedback</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <h1>Student Portal</h1>
+    <p>Student Feedback &amp; Suggestions</p>
+  </header>
+
+  <!-- Navigation Bar -->
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="dashboard.html">Dashboard</a>
+    <a href="profile.html">Profile</a>
+    <a href="events.html">Events</a>
+    <a href="faq.html">FAQ</a>
+    <a href="feedback.html" class="active">Feedback</a>
+    <a href="contact.html">Contact</a>
+    <a href="about.html">About Us</a>
+    <a href="login.html">Login</a>
+  </nav>
+
+  <!-- Main Content Container -->
+  <main class="container">
+
+    <div class="grid-2">
+
+      <!-- Feedback Form Card -->
+      <section class="card">
+        <h2>Feedback Form</h2>
+        <p>We value your thoughts, recommendations, and concerns to make our campus portal better.</p>
+
+        <form id="feedbackForm" onsubmit="handleFeedbackSubmit(event)">
+          <div class="form-group">
+            <label for="fullName">Full Name</label>
+            <input type="text" id="fullName" name="fullName" class="form-control" placeholder="Enter your full name" required>
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" class="form-control" placeholder="Enter your email address" required>
+          </div>
+
+          <div class="form-group">
+            <label for="subject">Subject</label>
+            <input type="text" id="subject" name="subject" class="form-control" placeholder="Enter feedback subject" required>
+          </div>
+
+          <div class="form-group">
+            <label for="message">Feedback Message</label>
+            <textarea id="message" name="message" class="form-control" rows="5" placeholder="Write your detailed feedback here..." required></textarea>
+          </div>
+
+          <div class="form-actions">
+            <button type="submit" class="btn btn-primary">Submit Feedback</button>
+            <button type="reset" class="btn btn-secondary">Clear Form</button>
+          </div>
+        </form>
+
+        <div id="feedbackAlert" class="alert-box alert-success"></div>
+      </section>
+
+      <!-- Why Your Feedback Matters Card -->
+      <section class="card">
+        <h2>Why Your Feedback Matters</h2>
+        <p>Continuous feedback from students is the cornerstone of a vibrant, efficient academic community.</p>
+
+        <div style="margin-top: 15px;">
+          <div class="box-item" style="margin-bottom: 12px;">
+            <h4>Enhancing Portal Features</h4>
+            <p>Your inputs help us introduce new digital tools, attendance features, and simplified workflows.</p>
+          </div>
+          <div class="box-item" style="margin-bottom: 12px;">
+            <h4>Resolving Campus Issues</h4>
+            <p>Report bugs or academic timetable discrepancies directly to the technical administration.</p>
+          </div>
+          <div class="box-item" style="margin-bottom: 12px;">
+            <h4>Voice of the Students</h4>
+            <p>Share innovative ideas, club proposals, and workshop topics you want to see implemented.</p>
+          </div>
+        </div>
+      </section>
+
+    </div>
+
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2026 Student Portal. All Rights Reserved.</p>
+  </footer>
+
+  <script>
+    function handleFeedbackSubmit(event) {
+      event.preventDefault();
+      const name = document.getElementById('fullName').value.trim();
+      const subject = document.getElementById('subject').value.trim();
+      const alertBox = document.getElementById('feedbackAlert');
+
+      alertBox.textContent = 'Thank you, ' + name + '! Your feedback regarding "' + subject + '" has been received successfully.';
+      alertBox.style.display = 'block';
+
+      document.getElementById('feedbackForm').reset();
+
+      setTimeout(() => {
+        alertBox.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      }, 100);
+    }
+  </script>
+
+</body>
+</html>

@@ -3,120 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Student Portal</title>
-  <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    }
-
-    body {
-      background-color: #f4f6f9;
-      color: #333;
-    }
-
-    /* Header */
-    header {
-      background-color: #1d52b4;
-      color: white;
-      text-align: center;
-      padding: 2.5rem 1rem 1.5rem;
-    }
-
-    header h1 {
-      font-size: 2.2rem;
-      font-weight: 700;
-      margin-bottom: 0.5rem;
-    }
-
-    header p {
-      font-size: 1rem;
-      opacity: 0.9;
-    }
-
-    /* Navigation Bar */
-    nav {
-      background-color: #143d8a;
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      padding: 0.8rem;
-      gap: 1.2rem;
-    }
-
-    nav a {
-      color: white;
-      text-decoration: none;
-      font-size: 0.95rem;
-      font-weight: 500;
-      padding: 0.4rem 0.8rem;
-      border-radius: 4px;
-      transition: background-color 0.2s ease;
-    }
-
-    nav a:hover, nav a.active {
-      background-color: rgba(255, 255, 255, 0.2);
-    }
-
-    /* Main Container */
-    .container {
-      max-width: 1000px;
-      margin: 2rem auto;
-      padding: 0 1rem;
-      display: flex;
-      flex-direction: column;
-      gap: 1.5rem;
-    }
-
-    /* Cards */
-    .card {
-      background: white;
-      padding: 2rem;
-      border-radius: 10px;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-    }
-
-    .card h2 {
-      font-size: 1.5rem;
-      color: #222;
-      margin-bottom: 0.8rem;
-    }
-
-    .card p {
-      color: #555;
-      line-height: 1.6;
-    }
-
-    /* Feature Buttons Grid */
-    .buttons-grid {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 1rem;
-      margin-top: 1.2rem;
-    }
-
-    .btn {
-      display: inline-block;
-      background-color: #e8f0fe;
-      color: #1d52b4;
-      text-decoration: none;
-      padding: 0.75rem 1.25rem;
-      border-radius: 6px;
-      font-weight: 600;
-      font-size: 0.95rem;
-      transition: all 0.2s ease;
-      border: 1px solid #d0e1fd;
-    }
-
-    .btn:hover {
-      background-color: #1d52b4;
-      color: white;
-      border-color: #1d52b4;
-      transform: translateY(-1px);
-    }
-  </style>
+  <title>Student Portal - Home</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
@@ -139,28 +27,40 @@
     <a href="login.html">Login</a>
   </nav>
 
-  <!-- Content Container -->
+  <!-- Main Content Container -->
   <main class="container">
-    
-    <!-- Welcome Card -->
+
+    <!-- Welcome Section -->
     <section class="card">
       <h2>Welcome to Student Portal!</h2>
-      <p>Access your academic information, view results, check announcements, and explore student services from one convenient place.</p>
+      <p>Welcome to the official Student Portal. This portal provides students with easy and centralized access to academic information, course resources, semester notices, examination updates, and campus services.</p>
     </section>
 
-    <!-- Portal Features Card -->
+    <!-- Short Description Section -->
+    <section class="card">
+      <h2>About the Student Portal</h2>
+      <p>The Student Portal is designed to streamline academic workflows for students and faculty. You can view your comprehensive student profile, check upcoming college events, review course attendance, submit feedback to the administration, and get answers to frequently asked questions anytime, anywhere.</p>
+    </section>
+
+    <!-- Portal Features Section -->
     <section class="card">
       <h2>Portal Features</h2>
+      <p>Click on any of the feature links below to quickly navigate to the respective portal section:</p>
       <div class="buttons-grid">
-        <a href="dashboard.html" class="btn">View Dashboard</a>
-        <a href="profile.html" class="btn">Student Profile</a>
-        <a href="events.html" class="btn">College Events</a>
-        <a href="feedback.html" class="btn">Give Feedback</a>
-        <a href="contact.html" class="btn">Contact Us</a>
+        <a href="dashboard.html" class="feature-btn">Dashboard</a>
+        <a href="profile.html" class="feature-btn">Profile</a>
+        <a href="events.html" class="feature-btn">Events</a>
+        <a href="feedback.html" class="feature-btn">Feedback</a>
+        <a href="contact.html" class="feature-btn">Contact</a>
       </div>
     </section>
 
   </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2026 Student Portal. All Rights Reserved.</p>
+  </footer>
 
 </body>
 </html>

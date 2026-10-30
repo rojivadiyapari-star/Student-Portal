@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Portal - Profile</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <h1>Student Portal</h1>
+    <p>Student Profile Information</p>
+  </header>
+
+  <!-- Navigation Bar -->
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="dashboard.html">Dashboard</a>
+    <a href="profile.html" class="active">Profile</a>
+    <a href="events.html">Events</a>
+    <a href="faq.html">FAQ</a>
+    <a href="feedback.html">Feedback</a>
+    <a href="contact.html">Contact</a>
+    <a href="about.html">About Us</a>
+    <a href="login.html">Login</a>
+  </nav>
+
+  <!-- Main Content Container -->
+  <main class="container">
+
+    <!-- Profile Overview Card -->
+    <section class="card">
+      <h2>Profile Information</h2>
+      <p>Here is your registered academic and personal information recorded in the university database.</p>
+
+      <div class="table-responsive">
+        <table class="profile-table">
+          <thead>
+            <tr>
+              <th style="width: 35%;">Field</th>
+              <th>Student Details</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Full Name</td>
+              <td>Pari Rojivadiya</td>
+            </tr>
+            <tr>
+              <td>Student ID</td>
+              <td>25CS090</td>
+            </tr>
+            <tr>
+              <td>Email</td>
+              <td>25cs090@charusat.edu.in</td>
+            </tr>
+            <tr>
+              <td>Course</td>
+              <td>Bachelor of Technology (B.Tech)</td>
+            </tr>
+            <tr>
+              <td>Semester</td>
+              <td>Semester 4</td>
+            </tr>
+            <tr>
+              <td>Department</td>
+              <td>Computer Science and Engineering</td>
+            </tr>
+            <tr>
+              <td>Contact Number</td>
+              <td>+91 98765 43210</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="buttons-grid" style="margin-top: 20px;">
+        <button type="button" class="feature-btn" onclick="window.print();">Print Profile</button>
+        <button type="button" class="feature-btn" onclick="alert('Profile details are synced with the university registrar database.');">Verify Information</button>
+      </div>
+    </section>
+
+    <!-- Additional Academic Status Card -->
+    <section class="card">
+      <h2>Academic Enrollment Status</h2>
+      <div class="grid-2">
+        <div class="box-item">
+          <h4>Admission Category</h4>
+          <p>Regular Full-Time Undergraduate</p>
+        </div>
+        <div class="box-item">
+          <h4>Academic Year</h4>
+          <p>2025 - 2026</p>
+        </div>
+        <div class="box-item">
+          <h4>Campus Branch</h4>
+          <p>CSPIT, CHARUSAT University Campus</p>
+        </div>
+        <div class="box-item">
+          <h4>Account Status</h4>
+          <p><span style="color: #174ea6; font-weight: bold;">Active / In Good Standing</span></p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2026 Student Portal. All Rights Reserved.</p>
+  </footer>
+
+</body>
+</html>

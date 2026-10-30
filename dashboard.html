@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Portal - Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <h1>Student Portal</h1>
+    <p>Student Academic Dashboard</p>
+  </header>
+
+  <!-- Navigation Bar -->
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="dashboard.html" class="active">Dashboard</a>
+    <a href="profile.html">Profile</a>
+    <a href="events.html">Events</a>
+    <a href="faq.html">FAQ</a>
+    <a href="feedback.html">Feedback</a>
+    <a href="contact.html">Contact</a>
+    <a href="about.html">About Us</a>
+    <a href="login.html">Login</a>
+  </nav>
+
+  <!-- Main Content Container -->
+  <main class="container">
+
+    <!-- Dashboard Welcome Section -->
+    <section class="card">
+      <h2>Dashboard</h2>
+      <p>Welcome to your Student Dashboard. Access your profile, course progress, attendance reports, academic results, assignments, and digital library resources from one place.</p>
+    </section>
+
+    <!-- Quick Menu Section -->
+    <section class="card">
+      <h2>Quick Menu</h2>
+      <ul class="quick-menu-grid">
+        <li><a href="profile.html">View Profile</a></li>
+        <li><a href="#course-details">Course Details</a></li>
+        <li><a href="#attendance">Attendance</a></li>
+        <li><a href="#results">Results</a></li>
+        <li><a href="#assignments">Assignments</a></li>
+        <li><a href="#library">Library</a></li>
+      </ul>
+    </section>
+
+    <!-- Course Details Section -->
+    <section class="card" id="course-details">
+      <h2>Course Details</h2>
+      <p>Current Semester Enrolled Courses (Semester 4 - Computer Science):</p>
+      <div class="table-responsive">
+        <table>
+          <thead>
+            <tr>
+              <th>Course Code</th>
+              <th>Course Name</th>
+              <th>Faculty</th>
+              <th>Credits</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>CS401</td>
+              <td>Data Structures &amp; Algorithms</td>
+              <td>Dr. R. Sharma</td>
+              <td>4</td>
+            </tr>
+            <tr>
+              <td>CS402</td>
+              <td>Database Management Systems</td>
+              <td>Prof. A. Patel</td>
+              <td>4</td>
+            </tr>
+            <tr>
+              <td>CS403</td>
+              <td>Web Technology &amp; Applications</td>
+              <td>Prof. S. Mehta</td>
+              <td>3</td>
+            </tr>
+            <tr>
+              <td>CS404</td>
+              <td>Computer Networks</td>
+              <td>Dr. K. Joshi</td>
+              <td>4</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- Attendance Section -->
+    <section class="card" id="attendance">
+      <h2>Attendance</h2>
+      <p>Your current semester average attendance is <strong>92.5%</strong>. Keep it above 75% to maintain examination eligibility.</p>
+      <div class="grid-2" style="margin-top: 15px;">
+        <div class="box-item">
+          <h4>Data Structures &amp; Algorithms</h4>
+          <p>Total Classes: 40 | Attended: 38 (95%)</p>
+        </div>
+        <div class="box-item">
+          <h4>Database Management Systems</h4>
+          <p>Total Classes: 36 | Attended: 33 (91.6%)</p>
+        </div>
+        <div class="box-item">
+          <h4>Web Technology &amp; Applications</h4>
+          <p>Total Classes: 32 | Attended: 30 (93.7%)</p>
+        </div>
+        <div class="box-item">
+          <h4>Computer Networks</h4>
+          <p>Total Classes: 38 | Attended: 34 (89.4%)</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Results Section -->
+    <section class="card" id="results">
+      <h2>Results</h2>
+      <p>Cumulative Grade Point Average (CGPA): <strong>8.85 / 10.00</strong></p>
+      <div class="table-responsive">
+        <table>
+          <thead>
+            <tr>
+              <th>Semester</th>
+              <th>SGPA</th>
+              <th>Credits Cleared</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Semester 1</td>
+              <td>8.70</td>
+              <td>22</td>
+              <td>Passed</td>
+            </tr>
+            <tr>
+              <td>Semester 2</td>
+              <td>8.90</td>
+              <td>24</td>
+              <td>Passed</td>
+            </tr>
+            <tr>
+              <td>Semester 3</td>
+              <td>8.95</td>
+              <td>22</td>
+              <td>Passed</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- Assignments Section -->
+    <section class="card" id="assignments">
+      <h2>Assignments</h2>
+      <div class="table-responsive">
+        <table>
+          <thead>
+            <tr>
+              <th>Subject</th>
+              <th>Assignment Title</th>
+              <th>Deadline</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Web Technology</td>
+              <td>Practical 14 - Web Portal Architecture</td>
+              <td>05 Nov 2026</td>
+              <td><span style="color: #174ea6; font-weight: bold;">Submitted</span></td>
+            </tr>
+            <tr>
+              <td>Database Systems</td>
+              <td>SQL Indexing &amp; Query Optimization</td>
+              <td>10 Nov 2026</td>
+              <td><span style="color: #c25e00; font-weight: bold;">Pending</span></td>
+            </tr>
+            <tr>
+              <td>Computer Networks</td>
+              <td>Packet Tracer Routing Lab</td>
+              <td>15 Nov 2026</td>
+              <td><span style="color: #c25e00; font-weight: bold;">In Progress</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- Library Section -->
+    <section class="card" id="library">
+      <h2>Library</h2>
+      <p>Access college library books, borrow history, and online e-journals.</p>
+      <div class="box-item" style="margin-top: 10px;">
+        <h4>Currently Issued Books</h4>
+        <ul class="styled-list">
+          <li><strong>Introduction to Algorithms (CLRS)</strong> - Return by: 12 Nov 2026</li>
+          <li><strong>Database System Concepts (Silberschatz)</strong> - Return by: 18 Nov 2026</li>
+        </ul>
+      </div>
+      <div class="buttons-grid" style="margin-top: 15px;">
+        <a href="https://library.charusat.ac.in" target="_blank" rel="noopener noreferrer" class="feature-btn">Search Digital Catalog</a>
+        <a href="#library" onclick="alert('Your book renewal request has been sent to the librarian.');" class="feature-btn">Renew Issued Books</a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2026 Student Portal. All Rights Reserved.</p>
+  </footer>
+
+</body>
+</html>

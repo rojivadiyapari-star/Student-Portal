@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Portal - Contact</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <h1>Student Portal</h1>
+    <p>Contact &amp; Campus Information</p>
+  </header>
+
+  <!-- Navigation Bar -->
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="dashboard.html">Dashboard</a>
+    <a href="profile.html">Profile</a>
+    <a href="events.html">Events</a>
+    <a href="faq.html">FAQ</a>
+    <a href="feedback.html">Feedback</a>
+    <a href="contact.html" class="active">Contact</a>
+    <a href="about.html">About Us</a>
+    <a href="login.html">Login</a>
+  </nav>
+
+  <!-- Main Content Container -->
+  <main class="container">
+
+    <div class="grid-2">
+
+      <!-- Contact Details Card -->
+      <section class="card">
+        <h2>Contact Information</h2>
+        <p>If you have any academic inquiries, technical issues, or admission questions, our administrative and support offices are here to help.</p>
+
+        <ul class="contact-info-list">
+          <li>
+            <strong>College Name:</strong>
+            <span>CHARUSAT - Chandubhai S. Patel Institute of Technology (CSPIT)</span>
+          </li>
+          <li>
+            <strong>Address:</strong>
+            <span>CHARUSAT Campus, Off Nadiad-Petlad Highway, Changa - 388421, Gujarat, India</span>
+          </li>
+          <li>
+            <strong>Email:</strong>
+            <span>studentportal@charusat.edu.in</span>
+          </li>
+          <li>
+            <strong>Phone Number:</strong>
+            <span>+91 2697 265011 / 265021</span>
+          </li>
+          <li>
+            <strong>Working Hours:</strong>
+            <span>Monday to Saturday: 9:00 AM – 4:30 PM (Closed on 2nd &amp; 4th Saturdays)</span>
+          </li>
+        </ul>
+      </section>
+
+      <!-- Message Form Card -->
+      <section class="card">
+        <h2>Send Us a Message</h2>
+        <p>Submit your message or query directly to our campus helpdesk:</p>
+
+        <form id="contactForm" onsubmit="handleContactSubmit(event)">
+          <div class="form-group">
+            <label for="contactName">Full Name</label>
+            <input type="text" id="contactName" name="contactName" class="form-control" placeholder="Enter your full name" required>
+          </div>
+
+          <div class="form-group">
+            <label for="contactEmail">Email</label>
+            <input type="email" id="contactEmail" name="contactEmail" class="form-control" placeholder="Enter your email address" required>
+          </div>
+
+          <div class="form-group">
+            <label for="contactSubject">Subject</label>
+            <input type="text" id="contactSubject" name="contactSubject" class="form-control" placeholder="Reason for contact" required>
+          </div>
+
+          <div class="form-group">
+            <label for="contactMessage">Message</label>
+            <textarea id="contactMessage" name="contactMessage" class="form-control" rows="4" placeholder="Type your message here..." required></textarea>
+          </div>
+
+          <div class="form-actions">
+            <button type="submit" class="btn btn-primary">Send Message</button>
+            <button type="reset" class="btn btn-secondary">Clear</button>
+          </div>
+        </form>
+
+        <div id="contactAlert" class="alert-box alert-success"></div>
+      </section>
+
+    </div>
+
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2026 Student Portal. All Rights Reserved.</p>
+  </footer>
+
+  <script>
+    function handleContactSubmit(event) {
+      event.preventDefault();
+      const name = document.getElementById('contactName').value.trim();
+      const alertBox = document.getElementById('contactAlert');
+
+      alertBox.textContent = 'Thank you, ' + name + '! Your message has been sent to our campus support team.';
+      alertBox.style.display = 'block';
+
+      document.getElementById('contactForm').reset();
+
+      setTimeout(() => {
+        alertBox.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      }, 100);
+    }
+  </script>
+
+</body>
+</html>

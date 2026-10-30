@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Portal - FAQ</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <h1>Student Portal</h1>
+    <p>Frequently Asked Questions</p>
+  </header>
+
+  <!-- Navigation Bar -->
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="dashboard.html">Dashboard</a>
+    <a href="profile.html">Profile</a>
+    <a href="events.html">Events</a>
+    <a href="faq.html" class="active">FAQ</a>
+    <a href="feedback.html">Feedback</a>
+    <a href="contact.html">Contact</a>
+    <a href="about.html">About Us</a>
+    <a href="login.html">Login</a>
+  </nav>
+
+  <!-- Main Content Container -->
+  <main class="container">
+
+    <!-- Search / Intro Card -->
+    <section class="card">
+      <h2>Frequently Asked Questions</h2>
+      <p>Find answers to common questions about using the Student Portal, managing your profile, viewing academic progress, and logging in.</p>
+      <div style="margin-top: 15px;">
+        <input type="text" id="faqSearch" class="form-control" placeholder="Search questions or keywords..." onkeyup="filterFAQ()">
+      </div>
+    </section>
+
+    <!-- FAQ Items List Card -->
+    <section class="card" id="faqList">
+
+      <div class="faq-item">
+        <h4>1. What is the Student Portal?</h4>
+        <p>The Student Portal is an integrated online platform designed for students to conveniently view their academic records, semester grades, attendance statistics, assignment deadlines, event schedules, and administrative notices in one central location.</p>
+      </div>
+
+      <div class="faq-item">
+        <h4>2. How do I log into my Student Portal account?</h4>
+        <p>Click on the <strong>Login</strong> link in the navigation bar. Enter your assigned university username (or enrollment ID) and secure password, then click the <strong>Login</strong> button.</p>
+      </div>
+
+      <div class="faq-item">
+        <h4>3. What should I do if I forget my password?</h4>
+        <p>If you cannot remember your portal password, contact the university IT Helpdesk or visit the administration office with your student identity card to initiate a secure password reset.</p>
+      </div>
+
+      <div class="faq-item">
+        <h4>4. How can I check my attendance and exam results?</h4>
+        <p>Navigate to the <strong>Dashboard</strong> page. You will find dedicated sections displaying your enrolled courses, real-time subject-wise attendance percentages, and historical semester SGPA/CGPA records.</p>
+      </div>
+
+      <div class="faq-item">
+        <h4>5. Where can I find information about college events?</h4>
+        <p>Visit the <strong>Events</strong> page from the navigation bar. You can view all upcoming workshops, coding competitions, hackathons, and cultural festivals along with their dates, venues, and registration buttons.</p>
+      </div>
+
+      <div class="faq-item">
+        <h4>6. Can I submit suggestions or report portal issues?</h4>
+        <p>Yes! Please visit our <strong>Feedback</strong> page. You can fill out the feedback form with your name, email, subject, and message. All feedback is directly reviewed by the portal support team.</p>
+      </div>
+
+      <div class="faq-item">
+        <h4>7. Who can I contact for urgent technical support?</h4>
+        <p>You can visit the <strong>Contact</strong> page for university helpline numbers, physical campus address, and official departmental email contacts.</p>
+      </div>
+
+    </section>
+
+    <!-- Need More Help Card -->
+    <section class="card" style="text-align: center;">
+      <h2>Still Have Questions?</h2>
+      <p>If you did not find the answer you were looking for, feel free to reach out to our campus support team.</p>
+      <div style="margin-top: 15px;">
+        <a href="contact.html" class="feature-btn">Contact Campus Support</a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2026 Student Portal. All Rights Reserved.</p>
+  </footer>
+
+  <script>
+    function filterFAQ() {
+      const input = document.getElementById('faqSearch').value.toLowerCase();
+      const items = document.querySelectorAll('.faq-item');
+      items.forEach(item => {
+        const text = item.textContent.toLowerCase();
+        item.style.display = text.includes(input) ? 'block' : 'none';
+      });
+    }
+  </script>
+
+</body>
+</html>
